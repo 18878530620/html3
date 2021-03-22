@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>哇</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>🐕 猜数字游戏</h1>
+			会同步显示输入的内容<br>
+			<input v-model="younumber">
+			<li v-if="younumber>KeyNumber">太大啦</li>
+			<li v-if="younumber<KeyNumber">太小啦</li>
+			<li v-if="younumber==KeyNumber">答对啦，你真棒答案是：{{KeyNumber}}</li>
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					KeyNumber:Math.floor(Math.random()*10),
+					younumber:''
+				}
+			})
+		</script>
+		
+	</body>
+</html>
