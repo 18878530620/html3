@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<title>按月份输出天数</title>
+	</head>
+	<body>
+		<div id="app">
+					<h1>按月份输出天数</h1>
+					<input v-model="mouth">
+					<li v-if="mouth==2">28天</li>
+					<li v-if="mouth==1">31天</li>
+					<li v-if="mouth==3">31天</li>
+					<li v-if="mouth==5">31天</li>
+					<li v-if="mouth==7">31天</li>
+					<li v-if="mouth==8">31天</li>
+					<li v-if="mouth==10">31天</li>
+					<li v-if="mouth==12">31天</li>
+					<li v-if="mouth==4">30天</li>
+					<li v-if="mouth==6">30天</li>
+					<li v-if="mouth==9">30天</li>
+					<li v-if="mouth==11">30天</li>
+				</div>
+				<script type="text/javascript">
+					let v=new Vue({
+						el:'#app',
+						data:{
+							mouth:''
+						}
+					})
+				</script>
+	</body>
+</html>
